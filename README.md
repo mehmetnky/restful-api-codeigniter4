@@ -1,57 +1,31 @@
-# CodeIgniter 4 Framework
+# Codeigniter4 RestfulAPI
+This RestfulAPI was developed by me to be used for a football themed project. Now It's completely free to use, edit and manipulate by **anyone** with **any purpose**!
+## Features
+- Authentication with **JWT**
+- Login and register endpoints
+- Ready and free to edit & use!
+## How to Use
+Clone the repo and edit your apache server's `httpd.conf` and `httpd-vhosts.conf` files
+### httpd.conf
+    ...
+    DocumentRoot "C:\{PROJECT_ROOT}\public"
+    <Directory "C:\{PROJECT_ROOT}\public/">
+    ...
+### httpd-vhosts.conf
+    ...
+    DocumentRoot "C:\{PROJECT_ROOT}\public"
+    <Directory "C:\{PROJECT_ROOT}\public/">
+    ...
+Then restart your apache server to apply new configs. Navigate to http://localhost:80/. If the response is `{"success":true}` you are ready to go! (Please don't forget to create database with the `db.sql` file)
+## Endpoints
+| # | endpoint |  method |  headers |  body |
+|--|--|--|--|--|
+| 1 | / | GET | - | - |
+| 2 | /login | POST | - | {"email":"{email}","sifre":"{password}"} |
+| 3 | /register | POST | - | {"email":"test@test.com","sifre":"123456","ad":"Test","soyad":"Oyuncu","foto":"asd.png","dogum_gunu":"1996-11-06","forma_numarasi":10,"mevki_id":1,"forma_beden_id":2,boy":172,"kilo":63,"ayakkabi_numarasi":41,"ayak":"Sağ"} |
+| 4 | /players | GET | Authorization: Bearer ACCESS_TOKEN | - |
+| 5 | /players/:id | GET | Authorization: Bearer ACCESS_TOKEN | - |
+| 6 | /teams | GET | Authorization: Bearer ACCESS_TOKEN | - |
+| 7 | /teams/:id | GET | Authorization: Bearer ACCESS_TOKEN | - |
+| 8 | /players/byTeam/:id | GET | Authorization: Bearer ACCESS_TOKEN | - |
 
-## What is CodeIgniter?
-
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible, and secure. 
-More information can be found at the [official site](http://codeigniter.com).
-
-This repository holds the distributable version of the framework,
-including the user guide. It has been built from the 
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
-
-More information about the plans for version 4 can be found in [the announcement](http://forum.codeigniter.com/thread-62615.html) on the forums.
-
-The user guide corresponding to this version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/). 
-
-
-## Important Change with index.php
-
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
-
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
-
-**Please** read the user guide for a better explanation of how CI4 works!
-The user guide updating and deployment is a bit awkward at the moment, but we are working on it!
-
-## Repository Management
-
-We use Github issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
-
-This repository is a "distribution" one, built by our release preparation script. 
-Problems with it can be raised on our forum, or as issues in the main repository.
-
-## Contributing
-
-We welcome contributions from the community.
-
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/contributing.md) section in the development repository.
-
-## Server Requirements
-
-PHP version 7.2 or higher is required, with the following extensions installed: 
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php)
-- xml (enabled by default - don't turn it off)
