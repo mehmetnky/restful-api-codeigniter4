@@ -19,7 +19,9 @@ Clone the repo and edit your apache server's `httpd.conf` and `httpd-vhosts.conf
     DocumentRoot "C:\{PROJECT_ROOT}\public"
     <Directory "C:\{PROJECT_ROOT}\public/">
     ...
-Then restart your apache server to apply new configs. Navigate to http://localhost:80/. If the response is `{"success":true}` you are ready to go! (Please don't forget to create database with the `db.sql` file)
+Then restart your apache server to apply new configs. Navigate to http://localhost:80/. If the response is `{"success":true}` you are ready to go!
+
+(Please don't forget to create database with the `db.sql` file)
 
 ## Endpoints
 | # | endpoint |  method |  headers |  body |
