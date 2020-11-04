@@ -23,7 +23,7 @@ Then restart your apache server to apply new configs. Navigate to http://localho
 
 (Please don't forget to create database with the `db.sql` file)
 
-## Endpoints
+## Default Endpoints
 | # | endpoint |  method |  headers |  body |
 |--|--|--|--|--|
 | 1 | / | GET | - | - |
