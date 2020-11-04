@@ -1,11 +1,14 @@
 # Codeigniter4 RestfulAPI
-This RestfulAPI was developed by me to be used for a football themed project. Now It's completely free to use, edit and manipulate by **anyone** with **any purpose**!
+This RestfulAPI was developed by me to be used for a football themed project. Now It's completely **free** to **use**, **edit** and manipulate by **anyone** with **any purpose**!
+
 ## Features
 - Authentication with **JWT**
 - Login and register endpoints
 - Ready and free to edit & use!
+
 ## How to Use
 Clone the repo and edit your apache server's `httpd.conf` and `httpd-vhosts.conf` files
+
 ### httpd.conf
     ...
     DocumentRoot "C:\{PROJECT_ROOT}\public"
@@ -17,6 +20,7 @@ Clone the repo and edit your apache server's `httpd.conf` and `httpd-vhosts.conf
     <Directory "C:\{PROJECT_ROOT}\public/">
     ...
 Then restart your apache server to apply new configs. Navigate to http://localhost:80/. If the response is `{"success":true}` you are ready to go! (Please don't forget to create database with the `db.sql` file)
+
 ## Endpoints
 | # | endpoint |  method |  headers |  body |
 |--|--|--|--|--|
