@@ -28,7 +28,7 @@ Then restart your apache server to apply new configs. Navigate to http://localho
 |--|--|--|--|--|
 | 1 | / | GET | - | - |
 | 2 | /login | POST | - | {"email":{string},"sifre":{string}} |
-| 3 | /register | POST | - | {"email":{string},"sifre":{string},"ad":{string},"soyad":{string},"foto":{string},"dogum_gunu":"{yyyy-mm-dd}","forma_numarasi":{integer},"mevki_id":{integer},"forma_beden_id":{integer},boy":{integer},"kilo":{integer},"ayakkabi_numarasi":{integer},"ayak":"{enum -> Sağ/Sol/Çift}"} |
+| 3 | /register | POST | - | {"email":{string},"sifre":{string},"ad":{string},"soyad":{string},"foto":{string},"dogum_gunu":"{yyyy-mm-dd}","forma_numarasi":{integer},"mevki_id":{integer},"forma_beden_id":{integer},"boy":{integer},"kilo":{integer},"ayakkabi_numarasi":{integer},"ayak":"{enum -> Sağ/Sol/Çift}"} |
 | 4 | /players | GET | Authorization: Bearer ACCESS_TOKEN | - |
 | 5 | /players/:id | GET | Authorization: Bearer ACCESS_TOKEN | - |
 | 6 | /teams | GET | Authorization: Bearer ACCESS_TOKEN | - |
